@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Welcome Page -->
+  <div id="welcomePage">
+    <h1>Welcome to Task Management System</h1>
+    <p>Effortlessly organize your day with our intuitive task management app.</p>
+    <p>prioritize, and complete tasks with ease.</p> 
+    <p>Your productivity journey starts here -let’s make every moment count!"</p>  
+    <p>Signup or Login to get started!</p>    
+    <button onclick="showSignupPage()">Signup</button>
+    <button onclick="showLoginPage()">Login</button>
+  </div>
+
+  <!-- Signup Page -->
+  <div id="signupPage" class="hidden">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="text" id="mobileNumber" placeholder="Mobile Number" required />
+      <input type="text" id="usernameSignup" placeholder="Username" required />
+      <input type="password" id="passwordSignup" placeholder="Password" required />
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="hidden">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="usernameLogin" placeholder="Username" required />
+      <input type="password" id="passwordLogin" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Main App Page -->
+  <div id="appPage" class="hidden">
+    <header>
+      <button id="menuButton" onclick="toggleMenu()">☰</button>
+      <h1>Tasks</h1>
+    </header>
+    <nav id="sidebar" class="hidden">
+      <button onclick="showNewTaskPage()">New Task</button>
+      <button onclick="showCompletedTasks()">Completed Tasks</button>
+      <button onclick="showCancelledTasks()">Cancelled Tasks</button>
+      <button onclick="toggleMenu()">Back</button>
+      <button onclick="logout()">Logout</button>
+    </nav>
+    <main id="tasksContainer">
+      <p>No tasks yet. Add some tasks!</p>
+    </main>
+  </div>
+
+  <!-- Add Task Page -->
+<div id="newTaskPage" class="hidden">
+  <h2>Add New Task</h2>
+  <form id="newTaskForm">
+    <input type="text" id="taskName" placeholder="Task Name" required />
+    <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+    <input type="date" id="dueDate" required />
+    <input type="time" id="dueTime" required />
+    <button type="submit">Add Task</button>
+  </form>
+</div>
+
+<!-- Add the Task Details Page -->
+<div id="taskDetailsPage" class="hidden">
+  <h2>Task Details</h2>
+  <p><strong>Task Name:</strong> <span id="taskNameDetails"></span></p>
+  <p><strong>Description:</strong> <span id="taskDescriptionDetails"></span></p>
+  <p><strong>Due Date:</strong> <span id="dueDateDetails"></span></p>
+  <p><strong>Due Time:</strong> <span id="dueTimeDetails"></span></p>
+  <p><strong>Progress:</strong> <span id="progressDetails"></span></p>
+  
+  <button onclick="updateProgress()">Update Progress</button>
+  <button onclick="markAsCompleted()">Completed</button>
+  <button onclick="deleteTask()">CancelTask</button>
+  <button onclick="showAppPage()">Back to Tasks</button>
+</div>
+
+<div id="completedTasksPage" class="hidden">
+  <h2>Completed Tasks</h2>
+  <div id="completedTasksContainer"></div>
+  <button onclick="showAppPage()">Back to Tasks</button>
+</div>
+
+<div id="canceledTasksPage" class="hidden">
+  <h2>Canceled Tasks</h2>
+  <div id="canceledTasksContainer"></div>
+  <button onclick="showAppPage()">Back to Tasks</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

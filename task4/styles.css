@@ -1,0 +1,328 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.pinimg.com/originals/61/87/e9/6187e9226969b30607c22591376850b7.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+input, textarea, button {
+  padding: 12px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 300px;
+  margin: 5px 0;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+input, textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+button {
+  background-color: #e3c78a; /* Medium Golden Beige */
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+button:hover {
+  background-color: #d4b97a; /* Slightly Darker Medium Golden Beige */
+}
+
+header {
+  /* display: flex;
+  justify-content: space-between; */
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Welcome Page */
+#welcomePage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+}
+
+#welcomePage h1 {
+  font-size: 4 rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+}
+
+#welcomePage p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+}
+
+#welcomePage button {
+  background-color: #e3c78a; /* Medium Golden Beige */
+  margin-top: 20px;
+}
+
+#welcomePage button:hover {
+  background-color: #d4b97a;
+}
+
+/* Signup/Login Page */
+#signupPage, #loginPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#signupPage h2, #loginPage h2 {
+  color: #f8f9fa;
+}
+
+#signupPage button, #loginPage button {
+  margin-top: 15px;
+}
+
+/* App Page */
+#appPage {
+  padding: 20px;
+}
+
+#appPage header {
+  background-color: rgba(255, 255, 255,0);
+  color: white;
+}
+
+#tasksContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: flex-start; /* Aligns content to the top */
+  text-align: center;
+  height: calc(100vh - 60px); /* Adjust height to exclude header */
+  padding-top: 20px; /* Add some space from the top */
+}
+
+#tasksContainer h1 {
+  font-size: 2 rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+}
+
+#tasksContainer p {
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional shadow for better readability */
+}
+
+/* Sidebar Menu Button */
+#menuButton {
+  background-color: #e3c78a;
+  color: #333333;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#menuButton:hover {
+  background-color: #d4b97a;
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  gap: 15px;
+}
+
+#sidebar button {
+  width: 100%;
+  background-color: rgba(224, 190, 130, 0.8); /* Slightly Darker Beige */
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sidebar button:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Darker Beige */
+}
+
+/* New Task Page */
+#newTaskPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+#newTaskPage textarea {
+  height: 80px;
+}
+
+.task-button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+  background-color: #e3c78a; /* Medium Golden Beige */
+  border: none;
+  border-radius: 5px;
+}
+
+.task-button:hover {
+  background-color: #d4b97a; /* Slightly Darker Medium Golden Beige */
+}
+
+/* Additional Styling for Focus Effects */
+button:focus, input:focus {
+  outline: none;
+}
+
+button, input {
+  transition: all 0.3s ease;
+}
+
+button:hover, input:focus {
+  transform: scale(1.05);
+}
+
+#taskDetailsPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+}
+
+#taskDetailsPage button {
+  margin: 10px 0;
+}
+
+/* Canceled Tasks Page */
+#canceledTasksPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+  height: 80%; /* Optional: Adjust height for better viewing */
+  overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+/* Canceled Tasks Container */
+#canceledTasksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Completed Tasks Page */
+#completedTasksPage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+  height: 80%; /* Optional: Adjust height for better viewing */
+  overflow-y: auto; /* Allows scrolling if content is too long */
+}
+
+/* Completed Tasks Container */
+#completedTasksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
